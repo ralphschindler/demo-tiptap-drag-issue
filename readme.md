@@ -1,5 +1,7 @@
 # Demo of the Tiptap / Vue 2 Drag Start Issue
 
+https://codesandbox.io/p/github/ralphschindler/demo-tiptap-drag-issue/master?file=%2Freadme.md
+
 ## Native ( or 3rd-party ) Draggable events are not working once dragging is attempted in the editor.
 ### Steps to reproduce:
 - Drag and Drop the items in the component outside the TipTap editor
