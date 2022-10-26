@@ -1,16 +1,30 @@
 <template>
   <div>
-    <h1>This is the editor</h1>
+    <h1 class="text-xl">
+      Demo Of Dragging Issue Inside Tiptap Vue Based Nodes
+    </h1>
 
-    <editor-content :editor="editor" />
+    <p>
+      Inside the blue border is a TipTap editor, with content and a custom extension. The extension is using
+      vuedraggable.
+    </p>
 
-    <h3>
-      Same outside of editor:
-    </h3>
+    <div class="border border-1 border-blue-400 m-10">
+      <editor-content :editor="editor" />
+    </div>
 
-    <draggable v-model="myArray" group="people" @start="drag=true" @end="drag=false">
-      <div v-for="element in myArray" :key="element.id">{{element.name}}</div>
-    </draggable>
+
+    <p>
+      Below is the same vuedraggable component. Note: Once you attempt to drag the elements of the draggable
+      inside the editor, the below is also disabled and cannot be used.
+    </p>
+
+    <div class="border border-1 border-red-400 m-10">
+      <draggable v-model="myArray" group="people" @start="drag=true" @end="drag=false">
+        <div v-for="element in myArray" :key="element.id">{{element.name}}</div>
+      </draggable>
+    </div>
+
   </div>
 </template>
 
@@ -30,9 +44,9 @@ export default {
     return {
       editor: null,
       myArray: [
-        { name: 'Ralph', id: 1 },
-        { name: 'Seton', id: 2 },
-        { name: 'Uberdosis', id: 3 }
+        { name: 'Ξ First', id: 1 },
+        { name: 'Ξ Second', id: 2 },
+        { name: 'Ξ Third', id: 3 }
       ]
     }
   },

@@ -1,9 +1,11 @@
 <template>
   <node-view-wrapper>
-    <div style="border: 1px solid black">
-      <h3>Example Extension UI</h3>
+    <div class="border border-1 border-green-400 m-10">
+      <h3 class="text-lg">Example Extension UI</h3>
       <draggable v-model="myArray" group="people" @start="drag=true" @end="drag=false">
-        <div v-for="element in myArray" :key="element.id">{{element.name}}</div>
+        <div v-for="element in myArray" :key="element.id">
+          {{ element.name }}
+        </div>
       </draggable>
     </div>
   </node-view-wrapper>
@@ -22,9 +24,9 @@ export default {
   data () {
     return {
       myArray: [
-        { name: 'Ralph', id: 1 },
-        { name: 'Seton', id: 2 },
-        { name: 'Uberdosis', id: 3 }
+        { name: 'Ξ First', id: 1 },
+        { name: 'Ξ Second', id: 2 },
+        { name: 'Ξ Third', id: 3 }
       ]
     }
   }
